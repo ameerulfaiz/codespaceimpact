@@ -1,0 +1,37 @@
+import pygame
+
+# Inisialisasi Pygame
+pygame.init()
+
+# Ukuran layar
+screen_width = 800
+screen_height = 600
+
+# Warna latar belakang
+bg_color = (0, 0, 0)
+
+# Buat layar
+screen = pygame.display.set_mode((screen_width, screen_height))
+
+# Judul game
+pygame.display.set_caption("Space Impact")
+
+# Game loop
+running = True
+while running:
+    # Proses event
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Render latar belakang
+    screen.fill(bg_color)
+
+    # Render karakter
+    # ...
+
+    # Update layar
+    pygame.display.flip()
+
+# Keluar dari Pygame
+pygame.quit()
